@@ -38,14 +38,14 @@ const Game = () => {
     
     function handleClick(i:number){
         // check if square is already clicked
-        if (squares[i] !== null || isWinner(Board)) {
+        if (squares[i] !== null || isWinner()) {
             return
         }
         console.log(squares);
         squares[i] = is_x ? 'X' : 'O';
         setSquares(squares);
         setPlayer(!is_x);
-        if (isWinner(Board)) {
+        if (isWinner()) {
             console.log('hi', is_x? 'X':'O');
             if(is_x) {
                 setXWins(x_wins+1);
@@ -64,7 +64,7 @@ const Game = () => {
         }
     }
 
-    function isWinner(board: typeof Board) {
+    function isWinner() {
         const lines = [
             [0, 1, 2],
             [3, 4, 5],

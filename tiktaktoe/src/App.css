@@ -4,15 +4,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #373B52;
+  background-color: #373B52; 
+  min-height: 100%;
 }
 
-.App-logo {
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -20,7 +23,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +43,14 @@
   to {
     transform: rotate(360deg);
   }
-}
-p{
+} */
+p {
   color: #373B52;
+}
+
+body {
+  padding:0px;
+  margin:0px;
+
+  height: 100%;
 }

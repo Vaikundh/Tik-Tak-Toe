@@ -15,11 +15,12 @@
     background: url('../../Components/X.png');
     width: 116 px;
     height: 116 px;
+    background-size: 100%;
 }
 
 .o {
-    
-    background: url('../../Components/O2.png');
+    background: url('../../Components/O.png');
+    background-size: 100%;
 }
 
 .Square:hover{
