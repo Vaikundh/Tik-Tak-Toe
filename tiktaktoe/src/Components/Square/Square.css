@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.Square {
+    width: 140px;
+    height: 140px;
+    background: #626887;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x {
+    background: url('../../Components/X.png');
+    width: 116 px;
+    height: 116 px;
+}
+
+.o {
+    
+    background: url('../../Components/O2.png');
+}
+
+.Square:hover{
+    background-color: #464a5f;
+    transition:0.5s;
+}
+
+.Square::after{
+    background-color: #626887;
+    transition:0.5s;
+}

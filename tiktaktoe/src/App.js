@@ -1,23 +1,28 @@
 import logo from './logo.svg';
+import React  from 'react';
 import './App.css';
+import Square from './Components/Square/Square';
+import Game from './Pages/Game/Game';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Winner from './Pages/Winner/Winner';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>  
+          <Switch>
+            <Route path="/" exact component={Game} />
+            <Route path="/winner/" exact render={(props) => <Winner {...props} />} />
+          </Switch>
+      </Router>
+      <p>
+        wholesome tic tac toe :)
+      </p>
     </div>
   );
 }
