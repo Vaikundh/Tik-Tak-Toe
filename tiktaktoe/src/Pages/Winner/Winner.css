@@ -21,3 +21,22 @@
     font-style: normal;
     font-weight: normal;
 }
+
+.reset {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.x-text { 
+    color: #C08DE9;
+}
+
+.o-text { 
+    color: #517AE4;
+}
+
+.dash {
+    color: #626887;
+}

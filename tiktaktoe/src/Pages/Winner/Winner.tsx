@@ -7,19 +7,23 @@ import {
 } from "react-router-dom";
 import "./Winner.css";
 
-interface Props {
-    x_wins: number;
-    o_wins: number;
-    winner: string;
-}
 
-const Winner = (props: Props) => {
-    console.log(props.winner)
+const Winner = () => {
+
+    function resetScore() {
+        window.localStorage.setItem('x_wins', (0).toString());
+        window.localStorage.setItem('o_wins', (0).toString());
+
+        window.localStorage.setItem('message', '');
+    }
     return (
         <div>
-            <h2>{props.x_wins} - {props.o_wins}</h2>
-            <h1 className="winner text">Player {props.winner} Won!</h1>
+            <p className="x-text score text">{localStorage.getItem('x_wins')} </p>
+            <p className="dash score text">-</p>
+            <p className="o-text score text"> {localStorage.getItem('o_wins')}</p>
+            <h1 className="winner text">{window.localStorage.getItem('message')}</h1>
             <Link to="/"><button className="play-button text">Play Again!</button></Link>
+            <Link to="/"><p className="reset text" onClick={() => resetScore()}>Reset Score</p></Link>
         </div>
     )
 };
