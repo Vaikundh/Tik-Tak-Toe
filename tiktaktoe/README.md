@@ -1,13 +1,13 @@
-#Tik Tak Toe
+# Tik Tak Toe
 
 Welcome to Tik Tak Toe, the first WDB Bootcamp Dev project!
 
-##Our Plan:
+## Our Plan:
 ### Using create-react-app, start using
-'''
+```
 cd tiktaktoe
 yarn start
-'''
+```
 Code Structure:
   - 2 components: Square -> Board (Board renders Squares)
       - Square:
