@@ -6,10 +6,8 @@ import './Board.css'
 
 interface Props {
     boardSquares: boolean[];
-    // is_x: boolean; // x = True, o = False
     handleClick(index: number): void;
 }
-
 
 const Board = (props: Props) => {
     const {boardSquares, handleClick} = props;

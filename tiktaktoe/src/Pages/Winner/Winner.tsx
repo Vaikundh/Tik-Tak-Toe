@@ -13,9 +13,9 @@ const Winner = () => {
     function resetScore() {
         window.localStorage.setItem('x_wins', (0).toString());
         window.localStorage.setItem('o_wins', (0).toString());
-
         window.localStorage.setItem('message', '');
     }
+    
     return (
         <div>
             <p className="x-text score text">{localStorage.getItem('x_wins')} </p>

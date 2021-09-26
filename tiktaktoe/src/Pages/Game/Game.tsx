@@ -20,61 +20,11 @@ import "./Game.css";
 
 const Game = () => {
     const [squares, setSquares] = useState(Array(9).fill(null))
-    // const [x_wins, setXWins] = useState(0)
-    // const [o_wins, setOWins] = useState(0)
     const [is_x, setPlayer] = useState(true)
     const history = useHistory();
 
-    // useEffect(() => {
-    //     // function checkWins() {
-    //     var x_item = window.localStorage.getItem('x_wins');
-    //     console.log(x_item);
-    //     if (x_item) {
-    //         console.log(x_item);
-    //         console.log(JSON.parse(x_item));
-    //         window.localStorage.setItem('x_wins', x_wins.toString());
-    //         setXWins(Number(x_item));
-    //     }
-        
-    //     var o_item = window.localStorage.getItem('o_wins');
-    //     console.log(o_item);
-    //     if (o_item) {
-    //         console.log(o_item);
-    //         console.log(JSON.parse(o_item));  
-    //         window.localStorage.setItem('o_wins', o_wins.toString());
-    //         setOWins(Number(o_item));
-    //     }
-    //     // }
-    //     // window.addEventListener('storage', checkWins)
-
-    //     // return () => {
-    //     //     window.removeEventListener('storage', checkWins)
-    //     // }
-    // }, [x_wins, o_wins]);
-
-    // function setNumberWins() {
-        
-
-    //     useEffect(() => {
-    //         var x_item = window.localStorage.getItem('x_wins');
-    //         if (x_item) {
-    //             console.log(x_item);
-    //             console.log(JSON.parse(x_item));
-    //         }
-            
-    //         var o_item = window.localStorage.getItem('o_wins');
-    //         if (o_item) {
-    //             console.log(o_item);
-    //             console.log(JSON.parse(o_item));  
-    //         }
-    //         // setXWins(window.localStorage.getItem('x_wins'));
-    //         // setOWins(window.localStorage.getItem('o_wins'));
-    //       }, []);
-    // }
-
     var x_wins = Number(window.localStorage.getItem('x_wins'));
     var o_wins = Number(window.localStorage.getItem('o_wins'));
-    console.log(typeof x_wins);
      
     function handleClick(i:number){
         // check if square is already clicked
@@ -88,15 +38,9 @@ const Game = () => {
             console.log('hi', is_x? 'X':'O');
             
             if (is_x) {
-                console.log('x');
-                // console.log(setXWins(x_wins+1));
                 window.localStorage.setItem('x_wins', (x_wins+1).toString());
                 window.localStorage.setItem('message', 'Player 1 Wins!')
-                console.log(x_wins+1);
             } else {
-                
-                console.log('o');
-                // console.log(setOWins(o_wins+1));
                 window.localStorage.setItem('o_wins', (o_wins+1).toString());
                 console.log(o_wins + 1);
                 window.localStorage.setItem('message', 'Player 2 Wins!');
