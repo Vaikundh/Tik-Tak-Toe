@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); 
 
-.turn {
+.text {
     font-family: "Varela Round", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -8,8 +8,21 @@
 
 }
 
-.score { 
+.x-text { 
+    color: #517AE4;
+}
+
+.o-text { 
+    color: #C08DE9;
+}
+
+.dash {
+    color: #626887;
+}
+
+.score {
     font-size: 36px;
+    display: inline;
 }
 
 .turn {

@@ -86,9 +86,11 @@ const Game = () => {
 
     return (
         <div className="Game">
-            <h2 className="score text">{x_wins} - {o_wins}</h2>
+            <p className="x-text score text">{x_wins} </p>
+            <p className="dash score text">-</p>
+            <p className="o-text score text"> {o_wins}</p>
             <h2 className="turn text">Player : {is_x ? 1:2}</h2>
-            <Board boardSquares={squares} is_x={is_x} handleClick={handleClick} />
+            <Board boardSquares={squares} handleClick={handleClick} />
         </div>
     )
 }

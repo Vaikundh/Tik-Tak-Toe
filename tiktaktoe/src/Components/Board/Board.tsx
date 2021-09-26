@@ -6,18 +6,18 @@ import './Board.css'
 
 interface Props {
     boardSquares: boolean[];
-    is_x: boolean; // x = True, o = False
+    // is_x: boolean; // x = True, o = False
     handleClick(index: number): void;
 }
 
 
 const Board = (props: Props) => {
-    const {boardSquares, is_x, handleClick} = props;
+    const {boardSquares, handleClick} = props;
     return (
         <div className="container">
-            {boardSquares.map((is_x, ind) => (
+            {boardSquares.map((val, ind) => (
                 <Square 
-                x_or_o={is_x} 
+                // x_or_o={is_x} 
                 index={ind}
                 value={boardSquares[ind]}
                 handleClick={handleClick}
